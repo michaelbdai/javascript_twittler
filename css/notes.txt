@@ -1,0 +1,7 @@
+#91111E darkred
+#052D51 darkblue
+#004F2F darkgreen
+#5D64AA purple
+#725336 brown
+
+
