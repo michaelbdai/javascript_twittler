@@ -13,6 +13,7 @@ streams.users.penny = [];
 streams.users.raj = [];
 streams.users.sheldon = [];
 window.users = Object.keys(streams.users);
+var protectedDefaultUser = users.slice();
 
 // utility function for adding tweets to our data structures
 var addTweet = function(newTweet){
@@ -40,9 +41,9 @@ var randomMessage = function(){
 // generate random tweets on a random schedule
 var generateRandomTweet = function(){
   var tweet = {};
-  tweet.user = randomElement(users);
+  tweet.user = randomElement(protectedDefaultUser);
   tweet.message = randomMessage();
-  tweet.created_at = new Date();
+  tweet.created_at = new Date(); // --------------------> get the current time.
   addTweet(tweet);
 };
 
@@ -52,7 +53,7 @@ for(var i = 0; i < 10; i++){
 
 var scheduleNextTweet = function(){
   generateRandomTweet();
-  setTimeout(scheduleNextTweet, Math.random() * 5000);
+  setTimeout(scheduleNextTweet, Math.random() * 3000);
 };
 scheduleNextTweet();
 

@@ -4,13 +4,52 @@
     <script src="js/jquery.js"></script>
     <script src="js/data_generator.js"></script>
     <script src="js/app.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <div class = 'form-wrapper'>
+      <form class= 'add-tweet'>
+        <input type = 'text' class = 'enter-name' name = 'enter-name' placeholder = 'Enter user name'>
+        <input type = 'text' class = 'enter-tweet' name = 'enter-tweet' placeholder = 'Enter your tweet. '>
+        <input type = 'submit' class = 'submit-tweet' name = 'submit-tweet' value = 'Submit my Tweet'>
+
+      </form>
+    </div>
+    <div class = 'pick-user-wrapper'>
+      <div class = 'display-portraits'>
+        <img src= 'images/howard.jpg' id = 'howard' class = 'portrait'>
+        <img src= 'images/penny.jpg' id = 'penny' class = 'portrait'>
+        <img src= 'images/sheldon.jpg' id = 'sheldon' class = 'portrait'>
+        <img src= 'images/raj.jpg' id = 'raj' class = 'portrait'>
+        <img src= 'images/leonard.jpg' id = 'leonard' class = 'portrait'>
+        <img src= 'images/other-user.jpg' id = 'others' class = 'portrait'>
+
+      </div>
+    </div>
 
     <div class = 'tweet-wrapper'></div>
+    <div class = 'inquired-tweet-wrapper hidden'>
+      <div class = 'hide-button'>Go back</div>
+      <div class = 'inquired-tweet'></div>
+    </div>
+
+    <div class = 'template hidden'> <!-- hidden********************* -->
+      <div class= 'tweet-line'>
+        <div class= 'small-portrait'></div>
+        <div class= 'tweet-content'>
+          <div class= 'user-name'></div>
+          <div class= 'tweet-text handwriting'></div>
+        </div>
+        <div class= 'timing'>
+          <div class = 'show-age'>New Tweet</div>
+          <div class = 'time-stamp date'></div>
+        </div>
+      </div>
+      
+    </div> <!-- end hidden****************************************** -->
+
   </body>
 </html>
